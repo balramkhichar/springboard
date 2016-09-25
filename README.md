@@ -1,6 +1,6 @@
 # Springboard
 
-Jobs Board
+Courses Board
 
 ## Build & development
 
