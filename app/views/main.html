@@ -1,0 +1,26 @@
+<!-- toolbar -->
+<div class="row sb-toolbar">
+	<div class="search col-sm-12">
+		<input type="text" ng-model="searchText" placeholder="Search by tags"/>
+	</div>
+</div>
+
+<!-- feed -->
+<div class="row sb-feed">
+	<div class="col-sm-6 card" ng-repeat="path in apiData.paths | filter: tagFilter">
+		<div class="wrapper">
+			<div class="content">
+				<div class="image col-sm-4" style="background-image: url(https://d1v7bd3b0sjvlo.cloudfront.net/uploads/learning_path/thumb/ux_design_thumb.png);"></div>
+				<div class="data col-sm-8">
+					<h2 ng-bind="path.name"></h2>
+					<p ng-bind="path.description"></p>
+					<div class="row info">
+						<div class="col-xs-6 icon time"><span ng-bind="path.hours"></span> Hours</div>
+						<div class="col-xs-6 icon user"><span ng-bind="path.learner"></span> Learners</div>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="btn sb-btn" target="_blank">View Curriculum</a>
+		</div>
+	</div>
+</div>
